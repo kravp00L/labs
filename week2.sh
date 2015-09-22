@@ -21,9 +21,13 @@ echo "[+] Installing Git source control"
 apt-get -q -y install git
 echo "[+] Installing required development libraries"
 apt-get -q -y install libxml2-dev libxslt1-dev
-echo "[+] Installing python pip"
-apt-get -q -y install python-pip
 cd /opt
+echo "[+] Installing python pip"
+# Package installation out of date
+# apt-get -q -y install python-pip
+curl https://bootstrap.pypa.io/get-pip.py
+chmod u+x /opt/get-pip.py 
+python /opt/get-pip.py 
 echo "[+] Cloning theHarvester from source"
 git clone https://github.com/laramies/theHarvester.git
 echo "[+] Cloning dnsrecon from source"
