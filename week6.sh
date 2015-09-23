@@ -34,5 +34,7 @@ echo "[+] Creating the PHP test page"
 echo -n "<?php phpinfo(); ?>" > /var/www/phpinfo.php
 echo "[+] Updating database credentials for Mutillidae web application"
 sed -i 's/MySQLDatabasePassword\ =\ ""/MySQLDatabasePassword\ =\ "CMIT321"/' /var/www/mutillidae/classes/MySQLHandler.php
+echo "[+] Restarting Apache web server"
+service apache2 restart
 #firefox http://localhost &
 #firefox http://localhost/phpinfo.php &
