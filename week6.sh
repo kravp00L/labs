@@ -32,5 +32,7 @@ echo "[+] Cloning Mutillidae2 from Git repository"
 git clone git://git.code.sf.net/p/mutillidae/git /var/www/mutillidae
 echo "[+] Creating the PHP test page"
 echo -n "<?php phpinfo(); ?>" > /var/www/phpinfo.php
-firefox http://localhost &
-firefox http://localhost/phpinfo.php &
+echo "[+] Updating database credentials for Mutillidae web application"
+sed -i 's/MySQLDatabasePassword\ =\ ""/MySQLDatabasePassword\ =\ "CMIT321"/' /var/www/mutillidae/classes/MySQLHandler.php
+#firefox http://localhost &
+#firefox http://localhost/phpinfo.php &
