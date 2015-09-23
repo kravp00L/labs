@@ -10,7 +10,4 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-echo "[+] Installing Git source control"
-apt-get -q -y install git
-
 

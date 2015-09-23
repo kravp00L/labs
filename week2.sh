@@ -17,8 +17,6 @@ if [[ $EUID -ne 0 ]]; then
     exit
 fi
 
-echo "[+] Installing Git source control"
-apt-get -q -y install git
 echo "[+] Installing required development libraries"
 apt-get -q -y install libxml2-dev libxslt1-dev
 cd /opt
