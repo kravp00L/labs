@@ -19,8 +19,6 @@ fi
 #Update ubuntu repository
 echo "[+] Updating repositories"
 apt-get -q update
-echo "[+] Installing Git source control"
-apt-get -q -y install git
 echo "[+] Installing ncat"
 apt-get -q -y install ncat
 echo "[+] Installing Apache web server"
