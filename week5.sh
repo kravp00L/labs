@@ -19,8 +19,8 @@ fi
 #Update ubuntu repository
 echo "[+] Updating repositories"
 apt-get -q update
-echo "[+] Installing ncat"
-apt-get -q -y install ncat
+echo "[+] Installing ncat [from nmap]"
+apt-get -q -y install nmap
 echo "[+] Installing Apache web server"
 apt-get -q -y install apache2 apache2-utils
 echo "[+] Installing MySQL database"

@@ -19,17 +19,15 @@ fi
 #Update ubuntu repository
 echo "[+] Updating repositories"
 apt-get -q update
-echo "[+] Installing Git source control"
-apt-get -q -y install git
-echo "[+] Installing ncat"
-apt-get -q -y install ncat
+echo "[+] Installing ncat [from nmap]"
+apt-get -q -y install nmap
 echo "[+] Installing Apache web server"
 apt-get -q -y install apache2 apache2-utils
 echo "[+] Installing MySQL database"
 apt-get -y install mysql-server libapache2-mod-auth-mysql php5-mysql
 mysql_install_db
 echo "[+] Installing PHP"
-apt-get -q -y install libapache-mod-php5 php5 php5-mysql php-pear php5-gd php5-mcrypt php5-curl
+apt-get -q -y install libapache2-mod-php5 php5 php5-mysql php-pear php5-gd php5-mcrypt php5-curl
 echo "[+] Cloning Mutillidae2 from Git repository"
 git clone git://git.code.sf.net/p/mutillidae/git /var/www/mutillidae
 echo "[+] Creating the PHP test page"
