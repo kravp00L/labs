@@ -31,10 +31,12 @@ apt-get -q -y install libapache2-mod-php5 php5 php5-mysql php-pear php5-gd php5-
 echo "[+] Cloning Mutillidae2 from Git repository"
 git clone git://git.code.sf.net/p/mutillidae/git /var/www/mutillidae
 echo "[+] Updating Apache config"
-sed 's/Directory\ Index\ index.+$/Directory\ Index\ index.php index.html/g' /etc/apache2/mods-enabled/dir.conf
+sed -i 's/Directory\ Index\ index.+$/Directory\ Index\ index.php index.html/g' /etc/apache2/mods-enabled/dir.conf
 echo "[+] Creating the PHP test page"
 echo -n "<?php phpinfo(); ?>" > /var/www/phpinfo.php
+echo "[+] Updating database credentials for Mutillidae web application"
+sed -i 's/MySQLDatabasePassword\ =\ ""/MySQLDatabasePassword\ =\ "CMIT321"/' /var/www/mutillidae/classes/MySQLHandler.php
 echo "[+] Restarting Apache web server"
 service apache2 restart
-firefox http://localhost &
-firefox http://localhost/phpinfo.php &
+#firefox http://localhost &
+#firefox http://localhost/phpinfo.php &
