@@ -23,7 +23,7 @@ cd /opt
 echo "[+] Installing python pip"
 # Package installation out of date
 # apt-get -q -y install python-pip
-curl https://bootstrap.pypa.io/get-pip.py
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 chmod u+x /opt/get-pip.py 
 python /opt/get-pip.py 
 echo "[+] Cloning theHarvester from source"
