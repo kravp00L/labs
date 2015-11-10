@@ -20,5 +20,6 @@ echo "[+] Installing nmap"
 apt-get -q -y install nmap
 echo "[+] Downloading Linux 32-bit Metasploit Framework"
 wget http://downloads.metasploit.com/data/releases/metasploit-latest-linux-installer.run
+chmod u+x metasploit-latest-linux-installer.run
 echo "[+] Running Metasploit Framework installer"
 ./metasploit-latest-linux-installer.run
